@@ -1,0 +1,266 @@
+body {
+  font-family: 'Arial Narrow', sans-serif;
+  width: 100%;
+  margin: 100%;
+  margin: 0;
+  font-size: x-large;
+  /* padding-bottom: 40px; */
+  background-color: white;
+  color: rgba(28, 28, 28, 1);
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 1em;
+  display: inline;
+  line-height: 80%;
+  letter-spacing: -1px;
+  padding-left: 10px;
+  text-align: center;
+  color: rgba(28, 28, 28, 1);
+  /* text-shadow: 1px 2px 3px rgb(255, 255, 255), 0 0 0 #a8a7a7, 1px 2px 3px #def; */
+
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 105%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(152, 152, 152);
+  transition: color 0.5s ease-in;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:active {
+  color: blue;
+}
+
+
+a:visited {
+  color: rgb(152, 152, 152);
+
+}
+
+/* Header */
+.header {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.headertitle {
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+}
+
+/* Footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: fit-content;
+  background-color: white;
+  border-top: solid 1px gainsboro;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+/* Exhibitions*/
+
+.year {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  background-color: white;
+
+}
+
+.type {
+  font-size: medium;
+
+}
+
+.date {
+  padding-right: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.details {
+  padding-right: 10px;
+}
+
+.small {
+  font-size: medium;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.accordion {
+  background-color: white;
+  color: rgba(28, 28, 28, 1);
+  ;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: x-large;
+  width: 100%;
+  border-top: solid 1px rgb(28, 28, 28);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  text-align: left;
+  outline: none;
+  transition: 0.8s ease-in;
+}
+
+/*   
+  .accordion:hover {
+    background-color: rgb(187, 250, 173);
+  }
+
+  .active {
+    background-color: #eaffe1;
+  } */
+
+.panel {
+  /* padding: 0 10px; */
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  font-size: x-large;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+}
+
+.current {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.paneltext {
+  margin: auto;
+  flex-grow: 1;
+  max-width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: x-large;
+}
+
+.panelimg {
+  margin: auto;
+  max-width: 90%;
+  max-height: 500px;
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+
+
+/* Layout */
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+}
+
+.wrapper>* {
+  flex: 1 100%;
+}
+
+.header {
+  background: tomato;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  border-left: solid 1px rgba(28, 28, 28, 1);
+  /* border-right: solid 1px rgba(28, 28, 28, 1);  */
+  /* font-family:'Helvetica', Arial, sans-serif; */
+  text-rendering: geometricPrecision;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+
+  /* box-shadow: 1px 1px 10px rgb(152, 152, 152); */
+}
+
+.aside-1 {
+  height: 100%;
+  overflow: scroll;
+}
+
+.aside-2 {
+  background-color: white;
+  border-left: solid 1px rgba(28, 28, 28, 1);
+  height: 100%;
+  overflow: scroll;
+  /* box-shadow: 1px 1px 10px rgb(152, 152, 152); */
+
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 9 0 0;
+  }
+
+}
+
+@media all and (min-width: 800px) {
+  .main {
+    flex: 3 0px;
+  }
+
+  .aside-1 {
+    order: 1;
+  }
+
+  .main {
+    order: 2;
+  }
+
+  .aside-2 {
+    order: 3;
+  }
+
+  .footer {
+    order: 4;
+  }
+}
+
+
+@media all and (max-width: 800px) {
+  .main {
+    border-left: none;
+    border-right: none;
+  }
+
+  .aside-1 {
+    height: fit-content;
+    border-top: solid 1px rgb(152, 152, 152);
+  }
+
+  .aside-2 {
+    height: fit-content;
+    border-top: solid 1px rgb(152, 152, 152);
+  }
+}
